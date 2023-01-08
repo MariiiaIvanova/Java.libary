@@ -1,0 +1,19 @@
+<web-app>
+    <servlet>
+        <servlet-name>book</servlet-name>
+        <servlet-class>com.caucho.hessian.server.HessianServlet</servlet-class>
+        <init-param>
+            <param-name>home-class</param-name>
+            <param-value>ru.library.My_library_project.server.BookServiceImpl</param-value>
+        </init-param>
+        <init-param>
+            <param-name>home-api</param-name>
+            <param-value>ru.library.My_library_project.api.services.BookService</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>book</servlet-name>
+        <url-pattern>/book</url-pattern>
+    </servlet-mapping>
+</web-app>
